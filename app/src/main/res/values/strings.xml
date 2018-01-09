@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SouthernBreezetour</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Login</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="tour">Tour</string>
+    <string name="hotel">Hotel</string>
+    <string name="golf">Golf</string>
+    <string name="spa">Spa</string>
+    <string name="description">KHỞI HÀNH (từ Hồ Chí Minh): 30/03/2018. Giá: 36.900.000 VNĐ
+        KHỞI HÀNH (từ Hà Nội): 01/04/2018. Giá: 36.900.000 VNĐ</string>
+    <string name="book">Book</string>
+    <string name="title">Title</string>
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="booking">Booking</string>
+    <string name="profile">Profile</string>
+    <string name="gift">Gift</string>
+    <string name="mytour">MyTour</string>
+    <string name="coupon">Coupon</string>
+    <string name="text_sample">Ha Long Bay has an area of around 1,553 km2, including 1,960–2,000 islets, most of which are limestone. The core of the bay has an area of 334 km2 with a high density of 775 islets.The limestone in this bay has gone through 500 million years of formation in different conditions and environments. The evolution of the karst in this bay has taken 20 million years under the impact of the tropical wet climate.The geo-diversity of the environment in the area has created biodiversity, including a tropical evergreen biosystem, oceanic and sea shore biosystem.Hạ Long Bay is home to 14 endemic floral species and 60 endemic faunal species.</string>
+    <string-array name="title">
+        <item>Tour</item>
+        <item>Hotel</item>
+        <item>Golf</item>
+        <item>Spa</item>
+    </string-array>
+</resources>

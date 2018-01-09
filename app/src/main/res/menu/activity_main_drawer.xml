@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_brown_300_24dp"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_tour"
+            android:icon="@drawable/ic_flight_grey_300_24dp"
+            android:title="@string/tour" />
+        <item
+            android:id="@+id/nav_hotel"
+            android:icon="@drawable/ic_hotel_brown_300_24dp"
+            android:title="@string/hotel" />
+        <item
+            android:id="@+id/nav_golf"
+            android:icon="@drawable/ic_golf_course_grey_300_24dp"
+            android:title="@string/golf" />
+        <item
+            android:id="@+id/nav_spa"
+            android:icon="@drawable/ic_spa_grey_300_24dp"
+            android:title="@string/spa" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_settings_brown_300_24dp"
+                android:title="@string/setting" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_input_brown_300_24dp"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
