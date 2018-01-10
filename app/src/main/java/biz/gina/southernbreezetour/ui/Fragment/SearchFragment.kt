@@ -1,4 +1,4 @@
-package biz.gina.southernbreezetour.ui
+package biz.gina.southernbreezetour.ui.Fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import biz.gina.southernbreezetour.R
 
 /**
- * Created by PC on 12/18/2017.
+ * Created by PC on 1/10/2018.
  */
-class SettingFragment: Fragment() {
+class SearchFragment : Fragment() {
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = inflater?.inflate(R.layout.fragment_setting, container, false)
+        var view= inflater?.inflate(R.layout.fragment_search_home, container,false)
+
         return view
     }
 }

@@ -1,4 +1,4 @@
-package biz.gina.southernbreezetour.ui
+package biz.gina.southernbreezetour.ui.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle

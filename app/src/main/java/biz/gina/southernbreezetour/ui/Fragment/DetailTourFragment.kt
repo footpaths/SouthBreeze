@@ -1,4 +1,4 @@
-package biz.gina.southernbreezetour.ui
+package biz.gina.southernbreezetour.ui.Fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

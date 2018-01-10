@@ -1,4 +1,4 @@
-package biz.gina.southernbreezetour.ui
+package biz.gina.southernbreezetour.ui.Activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,7 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
 import biz.gina.southernbreezetour.R
-import biz.gina.southernbreezetour.utils.DialogLoading
+import biz.gina.southernbreezetour.ui.Fragment.*
 import biz.gina.southernbreezetour.utils.MoveScreen
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
         toolbar.title = "Home"
         moveScreen = MoveScreen(this@MainActivity)
-        moveScreen!!.clickedOn(R.id.content, HomeFragment())
+        moveScreen!!.clickedOn(R.id.content, SearchFragment())
         val headerLayout = nav_view.getHeaderView(0)
         avatar= headerLayout.findViewById(R.id.avatar)
         avatar?.setOnClickListener {

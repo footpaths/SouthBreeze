@@ -1,4 +1,4 @@
-package biz.gina.southernbreezetour.ui
+package biz.gina.southernbreezetour.ui.Activity
 
 import android.content.Intent
 import android.os.Bundle

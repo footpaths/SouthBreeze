@@ -1,6 +1,5 @@
-package biz.gina.southernbreezetour.ui
+package biz.gina.southernbreezetour.ui.Fragment
 
-import android.app.DatePickerDialog
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -12,8 +11,6 @@ import android.widget.*
 import biz.gina.southernbreezetour.R
 import biz.gina.southernbreezetour.adapter.TourAdapter
 import biz.gina.southernbreezetour.utils.MoveScreen
-import biz.gina.southernbreezetour.R.id.spinner
-import java.text.SimpleDateFormat
 import java.util.*
 
 

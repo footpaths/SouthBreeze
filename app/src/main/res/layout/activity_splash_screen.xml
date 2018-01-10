@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite" >
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="184dp"
+        android:layout_height="184dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="132dp"
+        android:src="@drawable/chong" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_below="@id/imgLogo"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:id="@+id/txt_southernBreeze"
+        android:textColor="@color/colorBlack"
+        android:text="@string/southern" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_southernBreeze"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="14dp"
+         android:text="@string/travel_and_tourism_text" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="14dp"
+        android:textColor="#454545"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:text="@string/southern_breeze_text" />
+
+</RelativeLayout>

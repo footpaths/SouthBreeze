@@ -28,4 +28,9 @@
         <item>Golf</item>
         <item>Spa</item>
     </string-array>
+
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="southern_breeze_text">Southernbreeze JSC</string>
+    <string name="travel_and_tourism_text">TRAVEL &amp; TOURISM</string>
+    <string name="southern">SOUTHERN BREEZE</string>
 </resources>
