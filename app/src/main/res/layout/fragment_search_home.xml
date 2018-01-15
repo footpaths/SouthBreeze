@@ -52,8 +52,102 @@
 
         </LinearLayout>
 
+        <!-- LinearLayout Tour-->
         <LinearLayout
-            android:id="@+id/lnInfo"
+            android:id="@+id/lnTour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right_27dp"
+            android:layout_marginRight="@dimen/margin_left_right_27dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_layout_search"
+
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/drawable_left_location"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/drawable_right_location"
+                    android:drawableTint="@color/color_main"
+                    android:hint="DESTINATION"
+                    android:textSize="18sp"
+                    android:textColor="@color/color_main"
+                    android:textColorHint="@color/color_main" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_dark">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/lnsetDateTour"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="MONDAY"
+                    android:id="@+id/txtDayOfWeekTour"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Dec 25"
+                    android:id="@+id/txtDayMonthTour"
+                    android:textColor="@color/color_main"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lnBtnSearchTour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnSearchTour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_style"
+                android:text="SEARCH"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <!-- LinearLayout Hotel-->
+
+        <LinearLayout
+            android:id="@+id/lnHotel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_left_right_27dp"
@@ -61,16 +155,18 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_layout_search"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+
                     android:background="@null"
                     android:drawableLeft="@drawable/drawable_left_location"
                     android:drawablePadding="10dp"
@@ -90,96 +186,106 @@
 
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/lnSetDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="CHECK IN"
-                    android:textSize="12sp" />
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="CHECK IN"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="CHECK OUT"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="CHECK OUT"
-                    android:textSize="12sp" />
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtDayOfWeekStarted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/txtDayOfWeekEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dateChooseLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="DEC 25"
+                        android:textColor="@color/color_main"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/ic_arrow_forward_black_24dp"
+                        android:backgroundTint="@color/color_main" />
+
+                    <TextView
+                        android:id="@+id/dateChooseRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="DEC 26"
+                        android:textColor="@color/color_main"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_dark">
+
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-
-                    android:gravity="center"
-                    android:text="WEDNESDAY"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="WEDNESDAY"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="DEC 25"
-                    android:textColor="@color/color_main"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="0.5dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25"
-                    android:background="@drawable/ic_arrow_forward_black_24dp"
-                    android:backgroundTint="@color/color_main" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="DEC 26"
-                    android:textColor="@color/color_main"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/color_dark">
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -191,8 +297,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
                     android:layout_gravity="center"
+                    android:layout_weight="0.5"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -219,9 +325,9 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
-                    android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -265,11 +371,14 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lnBtnSearchHotel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
 
             <Button
+                android:id="@+id/btnSearchHotel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="40dp"
