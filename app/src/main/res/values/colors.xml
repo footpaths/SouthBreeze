@@ -8,6 +8,7 @@
     <color name="colorRed">#df2020</color>
     <color name="black_overlay">#66000000</color>
     <color name="color_dark">#66a9a9a9</color>
+    <color name="color_dark_black">#3d3d3d</color>
     <color name="color_main">#016dae</color>
     <color name="color_main_white">#32a6ec</color>
     <color name="color_orange">#ed7144</color>
