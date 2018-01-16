@@ -50,5 +50,5 @@ dependencies {
 
     compile 'com.squareup:android-times-square:1.6.5@aar'
     compile "org.jetbrains.anko:anko-common:0.8.3"
-
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
 }
