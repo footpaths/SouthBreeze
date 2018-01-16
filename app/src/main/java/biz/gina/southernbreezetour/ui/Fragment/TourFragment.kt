@@ -79,7 +79,7 @@ class TourFragment: Fragment(), AdapterView.OnItemSelectedListener {
         tourAdapter!!.setOnItemClickListener(object : TourAdapter.ClickListener {
             override fun OnItemClick(position: Int, v: View) {
                 var moveScreen= MoveScreen(activity)
-                moveScreen.clickedOn(R.id.content, DetailTourFragment())
+               // moveScreen.clickedOn(R.id.content, HotelDetailsFragment())
             }
         })
         return view

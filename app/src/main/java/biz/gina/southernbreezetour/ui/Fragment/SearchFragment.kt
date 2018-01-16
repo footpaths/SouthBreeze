@@ -15,7 +15,7 @@ import java.util.*
 /**
  * Created by PC on 1/10/2018.
  */
-class SearchFragment : Fragment() {
+class SearchFragment : Fragment(), View.OnClickListener {
     var dayOfTheWeekEndHotel: String? = null
     var dayOfTheWeekStartedHotel: String? = null
     var dayOfWeekTour: String? = null
@@ -28,10 +28,10 @@ class SearchFragment : Fragment() {
     var tempSize = 0
 
     var dates = ArrayList<Date>()
-    var datesTour :Date?=null
+    var datesTour: Date? = null
 
     private var moveScreen: MoveScreen? = null
-    var checkTab: Int?=1
+    var checkTab: Int? = 1
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var view = inflater?.inflate(R.layout.fragment_search_home, container, false)
         /**
@@ -43,7 +43,7 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         moveScreen = MoveScreen(activity)
-        if (checkTab == 1){
+        if (checkTab == 1) {
             btnHotel.setBackgroundResource(R.color.color_orange)
             lnHotel.visibility = View.VISIBLE
             lnBtnSearchHotel.visibility = View.VISIBLE
@@ -89,7 +89,7 @@ class SearchFragment : Fragment() {
                 dateChooseRight!!.text = "$monthEndHotel $dayEndHotel"
             }
 
-        }else{
+        } else {
             btnTour.setBackgroundResource(R.color.color_orange)
             lnHotel.visibility = View.GONE
             lnBtnSearchHotel.visibility = View.GONE
@@ -100,7 +100,7 @@ class SearchFragment : Fragment() {
         }
 
 
-        if (dayOfWeekTour.equals(null)|| dayTour.equals(null) || monthTour.equals(null)){
+        if (dayOfWeekTour.equals(null) || dayTour.equals(null) || monthTour.equals(null)) {
             val today = Calendar.getInstance()
 
             today.add(Calendar.DATE, 0)
@@ -108,51 +108,22 @@ class SearchFragment : Fragment() {
             monthTour = DateFormat.format("MMM", today) as String // Jun
             dayOfWeekTour = DateFormat.format("EEEE", today) as String
             txtDayOfWeekTour.text = dayOfWeekTour
-            txtDayMonthTour.text = monthTour + " "+ dayTour
-        }else{
+            txtDayMonthTour.text = monthTour + " " + dayTour
+        } else {
             txtDayOfWeekTour.text = dayOfWeekTour
-            txtDayMonthTour.text = monthTour + " "+ dayTour
+            txtDayMonthTour.text = monthTour + " " + dayTour
         }
 
-        btnTour.setOnClickListener {
-            checkTab =2
-            btnTour.setBackgroundResource(R.color.color_orange)
-            btnHotel.setBackgroundResource(R.color.color_main)
-            lnHotel.visibility = View.GONE
-            lnBtnSearchHotel.visibility = View.GONE
 
-            lnHotel.animate().alpha(0.0f).duration = 500
-            btnSearchHotel.animate().alpha(0.0f).duration = 500
-            lnTour.animate().alpha(1.0f).duration = 500
-            lnBtnSearchTour.animate().alpha(1.0f).duration = 500
+        btnTour.setOnClickListener(this)
+        btnHotel.setOnClickListener(this)
+        lnSetDate.setOnClickListener(this)
+        lnsetDateTour.setOnClickListener(this)
+        btnSortHotel.setOnClickListener(this)
+        btnSearchHotel.setOnClickListener(this)
+        btnSearchTour.setOnClickListener(this)
 
-            lnTour.visibility = View.VISIBLE
-            lnBtnSearchTour.visibility = View.VISIBLE
-        }
 
-        btnHotel.setOnClickListener {
-            checkTab=1
-            btnHotel.setBackgroundResource(R.color.color_orange)
-            btnTour.setBackgroundResource(R.color.color_main)
-            lnHotel.visibility = View.VISIBLE
-            lnBtnSearchHotel.visibility = View.VISIBLE
-            lnTour.visibility = View.GONE
-            lnBtnSearchTour.visibility = View.GONE
-            lnHotel.animate().alpha(1.0f).duration = 500
-            lnTour.animate().alpha(0.0f).duration = 500
-            lnBtnSearchTour.animate().alpha(0.0f).duration = 500
-            btnSearchHotel.animate().alpha(1.0f).duration = 500
-        }
-        lnSetDate.setOnClickListener {
-            val fragment = CalendarSearchFragmentHotel()
-            moveScreen!!.clickedOn(R.id.content, fragment)
-            fragment.setTargetFragment(this, 0)
-
-        }
-
-        lnsetDateTour.setOnClickListener {
-            moveScreen!!.clickedOn(R.id.content, CalendarSearchFragmentTour())
-        }
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -163,4 +134,60 @@ class SearchFragment : Fragment() {
         lateinit var instance: SearchFragment
             private set
     }
+
+
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            R.id.btnTour -> {
+                checkTab = 2
+                btnTour.setBackgroundResource(R.color.color_orange)
+                btnHotel.setBackgroundResource(R.color.color_main)
+                lnHotel.visibility = View.GONE
+                lnBtnSearchHotel.visibility = View.GONE
+
+                lnHotel.animate().alpha(0.0f).duration = 500
+                btnSearchHotel.animate().alpha(0.0f).duration = 500
+                lnTour.animate().alpha(1.0f).duration = 500
+                lnBtnSearchTour.animate().alpha(1.0f).duration = 500
+
+                lnTour.visibility = View.VISIBLE
+                lnBtnSearchTour.visibility = View.VISIBLE
+
+            }
+            R.id.btnHotel -> {
+                checkTab = 1
+                btnHotel.setBackgroundResource(R.color.color_orange)
+                btnTour.setBackgroundResource(R.color.color_main)
+                lnHotel.visibility = View.VISIBLE
+                lnBtnSearchHotel.visibility = View.VISIBLE
+                lnTour.visibility = View.GONE
+                lnBtnSearchTour.visibility = View.GONE
+                lnHotel.animate().alpha(1.0f).duration = 500
+                lnTour.animate().alpha(0.0f).duration = 500
+                lnBtnSearchTour.animate().alpha(0.0f).duration = 500
+                btnSearchHotel.animate().alpha(1.0f).duration = 500
+            }
+            R.id.lnSetDate -> {
+                val fragment = CalendarSearchFragmentHotel()
+                moveScreen!!.clickedOn(R.id.content, fragment)
+                fragment.setTargetFragment(this, 0)
+            }
+
+            R.id.lnsetDateTour -> {
+                moveScreen!!.clickedOn(R.id.content, CalendarSearchFragmentTour())
+            }
+            R.id.btnSortHotel -> {
+                moveScreen!!.clickedOn(R.id.content, SortFragmentHotel())
+            }
+            R.id.btnSearchHotel ->{
+                moveScreen!!.clickedOn(R.id.content, ListSearchHotelFragment())
+            }
+            R.id.btnSearchTour -> {
+                moveScreen!!.clickedOn(R.id.content,ListSearchTourFragment())
+            }
+        }
+    }
+
+
 }
