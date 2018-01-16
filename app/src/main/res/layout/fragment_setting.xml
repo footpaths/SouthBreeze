@@ -7,22 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp">
-
-    <com.savvi.rangedatepicker.CalendarPickerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/calendar_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        android:scrollbarStyle="outsideOverlay"
-        android:clipToPadding="false"
-        app:tsquare_dividerColor="@null"
-         />
-
-    <!-- <RelativeLayout
+     <RelativeLayout
          android:id="@+id/rlBooking"
          android:layout_width="match_parent"
          android:layout_height="70dp"
@@ -190,5 +175,5 @@
              android:layout_marginEnd="16dp"
              app:srcCompat="@drawable/ic_chevron_right" />
 
-     </RelativeLayout>-->
+     </RelativeLayout>
 </LinearLayout>

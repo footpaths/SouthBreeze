@@ -64,7 +64,7 @@
 
             android:orientation="vertical"
             android:padding="10dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,7 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <Button
                 android:id="@+id/btnSearchTour"
@@ -156,7 +156,7 @@
             android:background="@drawable/rounded_layout_search"
             android:orientation="vertical"
             android:padding="10dp"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -361,6 +361,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/btnSortHotel"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
                     android:background="@drawable/button_style_blue_white"

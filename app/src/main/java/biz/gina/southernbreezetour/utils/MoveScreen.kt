@@ -22,6 +22,14 @@ class MoveScreen(internal var context: Context) {
                 .replace(idlayout, fragment)
                 .commit()
     }
+    fun firstMoveFragment(idlayout: Int, fragment: Fragment) {
+        val tag = fragment.javaClass.toString()
+        (context as FragmentActivity).supportFragmentManager
+                .beginTransaction()
+                .setCustomAnimations(R.anim.fadein, R.anim.fadeout)
+                .replace(idlayout, fragment)
+                .commit()
+    }
 
     fun moveOneFragment(idlayout: Int, fragment: Fragment, bundle: Bundle) {
 

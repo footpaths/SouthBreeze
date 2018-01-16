@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
         toolbar.title = "Home"
         moveScreen = MoveScreen(this@MainActivity)
-        moveScreen!!.clickedOn(R.id.content, SearchFragment())
+        moveScreen!!.firstMoveFragment(R.id.content, SearchFragment())
         val headerLayout = nav_view.getHeaderView(0)
         avatar= headerLayout.findViewById(R.id.avatar)
         avatar?.setOnClickListener {
@@ -80,8 +80,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
             R.id.nav_home -> {
-                moveScreen!!.clickedOn(R.id.content, HomeFragment())
-                toolbar.title = "Home"
+//                moveScreen!!.clickedOn(R.id.content, HomeFragment())
+//                toolbar.title = "Home"
             }
             R.id.nav_hotel -> {
                 moveScreen!!.clickedOn(R.id.content, HotelFragment())
