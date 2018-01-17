@@ -123,7 +123,7 @@ class SearchFragment : Fragment(), View.OnClickListener {
         btnSearchHotel.setOnClickListener(this)
         btnSearchTour.setOnClickListener(this)
 
-
+        lnChooseRoom.setOnClickListener(this)
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -185,6 +185,9 @@ class SearchFragment : Fragment(), View.OnClickListener {
             }
             R.id.btnSearchTour -> {
                 moveScreen!!.clickedOn(R.id.content,ListSearchTourFragment())
+            }
+            R.id.lnChooseRoom ->{
+                moveScreen!!.clickedOn(R.id.content,ChoosePersonSearchFragment())
             }
         }
     }

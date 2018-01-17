@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -29,12 +31,12 @@
 
             <Spinner
                 android:id="@+id/spinnerSort"
-                android:popupBackground="@drawable/spinner_item_border"
-                android:spinnerMode="dialog"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:popupBackground="@drawable/spinner_item_border"
+                android:spinnerMode="dialog"
 
-                  />
+                />
         </LinearLayout>
         <!--<Spinner
             android:layout_width="match_parent"
@@ -52,18 +54,48 @@
             android:layout_marginTop="10dp"
             android:text="RANKING" />
 
-        <RatingBar
-            android:id="@+id/ratingBar2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:rating="3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStar1"
+                android:layout_width="60dp"
+
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star_border"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btnStar2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star_border"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btnStar3"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star_border"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/btnStar4"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star_border"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/btnStar5"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_star_border"
+                android:text="5" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,26 +104,80 @@
             android:layout_marginTop="10dp"
             android:text="PRICE RANKGE" />
 
-        <SeekBar
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:max="300"
-            android:min="0" />
+            android:layout_marginTop="10dp">
+
+            <com.github.guilhe.rangeseekbar.SeekBarRangedView
+                android:id="@+id/rangeSeekbar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundColor="@color/color_orange"
+                app:max="300"
+                app:min="0"
+                app:progressColor="@color/color_main"
+                app:thumbNormalResource="@drawable/ic_brightness_0"
+                app:thumbPressedResource="@drawable/ic_brightness_1"
+                custom:backgroundHeight="3dp"
+                custom:progressHeight="3dp" />
+
+            <TextView
+                android:id="@+id/textMin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rangeSeekbar3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="$ 0"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textMax3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rangeSeekbar3"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:text="$ 300+ "
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+        <!-- <com.warkiz.widget.IndicatorSeekBar
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:isb_max="100"
+             app:isb_min="0"
+             app:isb_progress="50"
+             app:isb_text_left_end="$0"
+             app:isb_text_right_end="$100"
+             app:isb_indicator_type="circular_bubble"
+             app:isb_indicator_stay="true"
+             app:isb_show_indicator="true" />-->
 
         <TextView
+            android:id="@+id/txtInfoRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="GUEST RATING" />
+            android:text="GUEST RATING:" />
 
         <SeekBar
+            android:id="@+id/sbGuestRating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:max="300"
-            android:min="0" />
+            android:max="10"
+            android:maxHeight="3dp"
+            android:min="0"
+            android:minHeight="3dp"
+            android:progress="5"
+            android:progressDrawable="@drawable/process"
+            android:thumb="@drawable/ic_brightness_0" />
 
         <TextView
             android:layout_width="wrap_content"
