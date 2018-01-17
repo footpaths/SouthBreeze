@@ -16,7 +16,7 @@ class TourAdapter(var context: Context, var list: List<String>): RecyclerView.Ad
     }
 
     override fun getItemCount(): Int {
-        return 4
+        return 10
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyHolder {

@@ -11,10 +11,10 @@ import biz.gina.southernbreezetour.R
 
 
 class MoveScreen(internal var context: Context) {
-    private val KEY_ID = "ID"
+
 
     fun clickedOn(idlayout: Int, fragment: Fragment) {
-        val tag = fragment.javaClass.toString()
+
         (context as FragmentActivity).supportFragmentManager
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fadein, R.anim.fadeout)
@@ -23,7 +23,7 @@ class MoveScreen(internal var context: Context) {
                 .commit()
     }
     fun firstMoveFragment(idlayout: Int, fragment: Fragment) {
-        val tag = fragment.javaClass.toString()
+
         (context as FragmentActivity).supportFragmentManager
                 .beginTransaction()
                 .setCustomAnimations(R.anim.fadein, R.anim.fadeout)
@@ -56,8 +56,8 @@ class MoveScreen(internal var context: Context) {
 
     }
 
-    fun finishFragment(fragment: Fragment) {
+   /* fun finishFragment(fragment: Fragment) {
         //        ((FragmentActivity)context).getSupportFragmentManager().beginTransaction().remove(fragment).commit();
         (context as FragmentActivity).supportFragmentManager.popBackStack()
-    }
+    }*/
 }

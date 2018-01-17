@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         toolbar.title = "Home"
+
         moveScreen = MoveScreen(this@MainActivity)
         moveScreen!!.firstMoveFragment(R.id.content, SearchFragment())
         val headerLayout = nav_view.getHeaderView(0)
